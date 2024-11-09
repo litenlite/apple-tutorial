@@ -48,6 +48,9 @@ struct MeetingHeaderView: View {
     }
 }
 
-#Preview("Title", traits: .sizeThatFitsLayout) {
-    MeetingHeaderView(secondsElapsed: 60, secondsRemaining: 180, theme: .bubblegum)
+struct MeetingHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        MeetingHeaderView(secondsElapsed: 60, secondsRemaining: 180, theme: .bubblegum)
+            .previewLayout(.sizeThatFits)
+    }
 }
